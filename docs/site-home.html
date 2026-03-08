@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexAPI · 首页</title>
+  <style>
+    /* 极简重置 —— 只移除默认边距，保留自然盒模型 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      /* 背景色 */
+      background-color: #666;
+
+      /* 确保内容始终撑满整个视口高度 */
+      min-height: 100vh;          /* 回退方案 */
+      min-height: 100dvh;         /* 动态视口高度，完美适配移动端 */
+
+      /* 弹性布局：垂直 + 水平居中 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      /* 极简排版：干净的系统字体，纯白文字，适当留白 */
+      color: #ffffff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      padding: 1.5rem;            /* 防止小屏幕边缘过于拥挤 */
+    }
+
+    /* Logo 图片 —— 干净、适中、自适应 */
+    .logo {
+      display: block;             /* 去除图片下方幽灵间隙 */
+      width: clamp(60px, 15vw, 96px);   /* 响应式尺寸：最小60px，最大96px */
+      height: auto;
+      margin-bottom: 1.5rem;      /* 与标题的距离 */
+    }
+
+    /* 主标题：有力、清晰 */
+    h1 {
+      font-size: clamp(2.5rem, 12vw, 5.5rem);  /* 手机≈2.5rem，大屏舒展 */
+      font-weight: 550;           /* 半粗，不轻薄也不笨重 */
+      line-height: 1.1;
+      letter-spacing: -0.02em;    /* 略微收紧，更现代 */
+      margin-bottom: 0.5rem;      /* 与宣传语的距离 */
+      text-wrap: balance;         /* 避免单词孤立行 (现代浏览器优雅降级) */
+    }
+
+    /* 宣传语：轻盈、克制 */
+    p {
+      font-size: clamp(1.2rem, 5vw, 2rem);
+      font-weight: 300;           /* 细体，与标题形成层次 */
+      line-height: 1.4;
+      opacity: 0.92;              /* 极轻微淡化，更柔和 */
+      max-width: 30ch;            /* 限制行宽，易于阅读 */
+      margin-left: auto;
+      margin-right: auto;
+      text-wrap: balance;
+    }
+
+    /* 图片本身不溢出 (备用) */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <img class="logo" src="https://nexworld.wiki/favicon.svg" alt="NexAPI 标识">
+
+  <h1>NexAPI</h1>
+
+  <p>下一代 AI API 平台</p>
+
+</body>
+</html>
